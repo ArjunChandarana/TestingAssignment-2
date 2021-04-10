@@ -1,129 +1,131 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+/*using Microsoft.VisualStudio.TestTools.UnitTesting;*/
+using Testing_Assignment_2;
+using Xunit;
 
 namespace UnitTestProject
 {
-    [TestClass]
+   
     public class UnitTest
     {
         string inputString = "";
         string expected = "";
-        [TestMethod]
+        [Fact]
         public void UppartoLower()
         {
             //Arrange
             inputString = "Unit Test";
             expected = "uNIT tEST";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "UppartoLower");
+            string output = inputString.ViceVersaConverter();
 
             //Assert
-            Assert.AreEqual(expected ,output);
+            Assert.Equal(expected ,output);
         }
 
-        [TestMethod]
+        [Fact]
         public void TitleCase()
         {
             //Arrange
             inputString = "unit test";
             expected = "Unit Test";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "TitleCase");
+            string output = inputString.TitleCaseConversion();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void Capitalized()
         {
             //Arrange
             inputString = "unit test";
             expected = "Unit Test";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "Capitalized");
+            string output =inputString.CapitalizedCaseConverter();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void CheckLower()
         {
             //Arrange
             inputString = "unit test";
             expected = "lowerCase";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "CheckLower");
+            string output = inputString.LowerCaseChecker();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void CheckUppar()
         {
             //Arrange
-            inputString = "UNIT TEST";
+            inputString = "UNIT";
             expected = "upparCase";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "CheckUppar");
+            string output = inputString.UpperCaseChecker();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void CheckforInt()
         {
             //Arrange
             inputString = "100";
             expected = "Success";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "CheckforInt");
+            string output = inputString.ConverterCheck();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void RemoveLastChar()
         {
             //Arrange
             inputString = "Unit Test";
             expected = "Unit Tes";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "RemoveLastChar");
+            string output = inputString.CharacterRemoval();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
-        [TestMethod]
+        [Fact]
         public void WordCount()
         {
             //Arrange
             inputString = "Unit Test";
             expected = "2";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "WordCount");
+            string output = inputString.WordCount();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
 
 
-        [TestMethod]
+        [Fact]
         public void StringToInt()
         {
             //Arrange
             inputString = "100";
             expected = "100";
             //Act
-            string output = Testing_Assignment_2.ExtensionMethods.StringConvert(inputString, "StringToInt");
+            string output = inputString.IntegerConverter();
 
             //Assert
-            Assert.AreEqual(expected, output);
+            Assert.Equal(expected, output);
         }
     }
 }

@@ -16,8 +16,8 @@ namespace Testing_Assignment_2
             Console.WriteLine("Enter operation");
             string operation = Console.ReadLine();
 
-            
-            output = ExtensionMethods.StringConvert(inputString, operation);
+
+            output = inputString.IntegerConverter();
             Console.WriteLine(output);
 
           
