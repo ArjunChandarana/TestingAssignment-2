@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Testing_Assignment_2
 {
     public static class ExtensionMethods
     {
         /// <summary>
-        /// indicates whether the string provided can be converted to an integer
+        /// Indicates whether the string provided can be converted to an integer
         /// </summary>
         /// <param name="input">String input parameter</param>
         /// <returns>'Success' if the string can be converted</returns>
@@ -29,7 +25,7 @@ namespace Testing_Assignment_2
         }
 
         /// <summary>
-        /// counts the word from given inputstring
+        /// Counts the word from given inputstring
         /// </summary>
         /// <param name="inputString"></param>
         /// <returns></returns>
@@ -41,7 +37,6 @@ namespace Testing_Assignment_2
                     wordCount++;
             return wordCount.ToString();
         }
-
 
         /// <summary>
         /// This function removes the last character from given the inputstring
@@ -108,25 +103,20 @@ namespace Testing_Assignment_2
         /// Returns a capitalized version of given input string 
         /// </summary>
         /// <param name="inputString"></param>
-        /// <returns></returns>
-
         public static string CapitalizedCaseConverter(this string inputString)
         {
             TextInfo textInfo = new CultureInfo("en-us", false).TextInfo;
             return textInfo.ToTitleCase(inputString);
         }
 
-
-
         /// <summary>
         /// Finds if all the characters from given input string are in lower case or not
         /// </summary>
         /// <param name="inputString"></param>
         /// <returns></returns>
-
         public static string LowerCaseChecker(this string inputString)
         {
-            int ascii = 0;
+            int ascii;
             foreach (var item in inputString)
             {
                 ascii = (int)item;
@@ -166,8 +156,8 @@ namespace Testing_Assignment_2
         /// <returns></returns>
         public static string ViceVersaConverter(this string inputString)
         {
-            string output = "";
-            int ascii = 0;
+            string output = string.Empty;
+            int ascii;
 
             foreach (var ch in inputString)
             {

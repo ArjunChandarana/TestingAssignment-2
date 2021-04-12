@@ -1,11 +1,8 @@
-﻿using System;
-/*using Microsoft.VisualStudio.TestTools.UnitTesting;*/
-using Testing_Assignment_2;
+﻿using Testing_Assignment_2;
 using Xunit;
 
 namespace UnitTestProject
 {
-   
     public class UnitTest
     {
         string inputString = "";
@@ -13,104 +10,111 @@ namespace UnitTestProject
         [Fact]
         public void UppartoLower()
         {
-            //Arrange
+            // Arrange
             inputString = "Unit Test";
             expected = "uNIT tEST";
-            //Act
+
+            // Act
             string output = inputString.ViceVersaConverter();
 
-            //Assert
+            // Assert
             Assert.Equal(expected ,output);
         }
 
         [Fact]
         public void TitleCase()
         {
-            //Arrange
+            // Arrange
             inputString = "unit test";
             expected = "Unit Test";
-            //Act
+            // Act
             string output = inputString.TitleCaseConversion();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
         public void Capitalized()
         {
-            //Arrange
+            // Arrange
             inputString = "unit test";
             expected = "Unit Test";
-            //Act
+            
+            // Act
             string output =inputString.CapitalizedCaseConverter();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
         public void CheckLower()
         {
-            //Arrange
+            // Arrange
             inputString = "unit test";
             expected = "lowerCase";
-            //Act
+            
+            // Act
             string output = inputString.LowerCaseChecker();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
         public void CheckUppar()
         {
-            //Arrange
+            // Arrange
             inputString = "UNIT";
             expected = "upparCase";
-            //Act
+            
+            // Act
             string output = inputString.UpperCaseChecker();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
         public void CheckforInt()
         {
-            //Arrange
+            // Arrange
             inputString = "100";
             expected = "Success";
-            //Act
+            
+            // Act
             string output = inputString.ConverterCheck();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
-        public void RemoveLastChar()
+        public void RemoveLastChar_String_Input_Test()
         {
-            //Arrange
+            // Arrange
             inputString = "Unit Test";
             expected = "Unit Tes";
-            //Act
+            
+            // Act
             string output = inputString.CharacterRemoval();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
         [Fact]
         public void WordCount()
         {
-            //Arrange
+            // Arrange
             inputString = "Unit Test";
             expected = "2";
-            //Act
+            
+            // Act
             string output = inputString.WordCount();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
 
@@ -118,13 +122,14 @@ namespace UnitTestProject
         [Fact]
         public void StringToInt()
         {
-            //Arrange
+            // Arrange
             inputString = "100";
             expected = "100";
-            //Act
+            
+            // Act
             string output = inputString.IntegerConverter();
 
-            //Assert
+            // Assert
             Assert.Equal(expected, output);
         }
     }
